@@ -25,14 +25,6 @@
     // };
 };
 
-/* ↓ この書き方なら、左手のビルドでもエラーになりません ↓ */
-/ {
-    trackball_peripheral_listener {
-        delay-ms = <100>;
-        exit-delay-ms = <150>;
-    };
-};
-
 / {
     combos {
         compatible = "zmk,combos";
