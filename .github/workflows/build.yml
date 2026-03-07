@@ -1,5 +1,27 @@
-on: [push, pull_request, workflow_dispatch]
+name: Build ZMK Firmware
+
+on:
+  push:
+  workflow_dispatch:
 
 jobs:
   build:
-    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        include:
+          - board: seeeduino_xiao_ble
+            shield: roBa_L
+          - board: seeeduino_xiao_ble
+            shield: roBa_R
+          - board: seeeduino_xiao_ble
+            shield: settings_reset
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build
+        uses: zmkfirmware/zmk-build-action@v1
+        with:
+          board: ${{ matrix.board }}
+          shield: ${{ matrix.shield }}
