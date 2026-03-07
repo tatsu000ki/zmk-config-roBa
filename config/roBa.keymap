@@ -91,7 +91,7 @@
 
         alt4 {
             bindings = <&kp LA(F4)>;
-            key-positions = <0 1 2 36>;
+            key-positions = <0 1 2>;
         };
 
         return {
