@@ -25,10 +25,12 @@
     // };
 };
 
-/* 2. マウス挙動の設定（ここが delay-ms の正しい居場所です） */
-&trackball_peripheral_listener {
-    delay-ms = <100>;
-    exit-delay-ms = <150>;
+/* ↓ この書き方なら、左手のビルドでもエラーになりません ↓ */
+/ {
+    trackball_peripheral_listener {
+        delay-ms = <100>;
+        exit-delay-ms = <150>;
+    };
 };
 
 / {
