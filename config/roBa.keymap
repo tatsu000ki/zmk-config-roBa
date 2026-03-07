@@ -60,7 +60,7 @@
         };
 
         kara {
-            bindings = <&kp TILDE>;
+            bindings = <&kp LS(EQUAL)>;
             key-positions = <7 7 8>;
         };
 
@@ -75,7 +75,7 @@
         };
 
         atmark {
-            bindings = <&kp AT_SIGN>;
+            bindings = <&kp LBKT>;
             key-positions = <8 9>;
         };
 
@@ -105,8 +105,13 @@
         };
 
         under_score {
-            bindings = <&kp UNDERSCORE>;
+            bindings = <&kp LS(INTERNATIONAL_1)>;
             key-positions = <33 32>;
+        };
+
+        esc_right {
+            bindings = <&kp ESC>;
+            key-positions = <18 19 20 21>;
         };
     };
 
@@ -128,7 +133,7 @@
         kakko: kakko {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LPAR &kp RPAR &kp LEFT_ARROW>;
+            bindings = <&kp LS(N9) &kp RPAR &kp LEFT_ARROW>;
             label = "KAKKO";
         };
     };
@@ -152,10 +157,10 @@
 &kp Q             &kp W         &kp E         &kp R                        &kp T                                                   &kp Y        &kp U  &lt 5 I    &kp O    &kp P
 &mt LCTRL A       &kp S         &kp D         &kp F                        &kp G        &kp LS(LG(S))               &pass          &kp H        &kp J  &kp K      &kp L    &kp ENTER
 &mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                        &kp B        &lt 6 N                     &kp DEL        &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 3 LANGUAGE_2  &lt 1 SPACE  &lt_to_layer_0 3 LANG1      &kp BACKSPACE  &lt 1 ENTER                             &kp ESC
+&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 3 LANGUAGE_2  &lt 1 SPACE  &lt_to_layer_0 2 LANG1      &kp BACKSPACE  &lt 1 ENTER                             &kp ESC
             >;
 
-            sensor-bindings = <&inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN>;
+            sensor-bindings = <&inc_dec_kp C_AC_SCROLL_UP C_AC_SCROLL_DOWN>;
         };
 
         FUNCTION {
@@ -171,30 +176,30 @@
 
         NUM {
             bindings = <
-&kp MINUS                   &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp PLUS                                                   &kp CARET         &kp AMPERSAND      &kp TILDE       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
-&kp SLASH                   &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp ASTERISK  &kp LC(LA(KP_NUMBER_0))      &kp UNDERSCORE  &kp EXCLAMATION   &kp AT_SIGN        &kp HASH        &kp DOLLAR            &kp PERCENT
-&mt LEFT_SHIFT KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERIOD    &kp EQUAL                    &trans          &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE       &kp BACKSLASH
-&trans                      &trans           &trans           &trans           &trans        &trans                       &trans          &trans                                                                     &kp PIPE
+&kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp EQUAL   &kp MINUS  &kp PLUS                             &kp BACKSLASH  &kp LS(NUMBER_8)      &kp LS(N9)         &trans     &kp PERCENT
+&kp LBKT          &kp SLASH          &kp DOLLAR  &kp SLASH  &kp ASTERISK  &trans         &trans  &kp QUESTION   &kp LEFT_BRACKET      &kp RIGHT_BRACKET  &kp COLON  &kp SEMICOLON
+&trans            &trans             &kp HASH    &trans     &kp EXCL      &kp EQUAL      &trans  &kp AMPERSAND  &kp LS(LEFT_BRACKET)  &kp LS(RBKT)       &trans     &kp BACKSLASH
+&trans            &trans             &trans      &trans     &trans        &trans         &trans  &trans                                                             &kp PIPE
             >;
         };
 
         ARROW {
             bindings = <
-&kp ESCAPE            &kp LC(W)  &kp LC(E)  &kp LC(R)  &kp LC(T)                      &trans    &kp PAGE_UP     &kp UP_ARROW      &kp PAGE_DOWN  &trans
-&kp LC(A)             &kp LC(S)  &kp LC(D)  &kp LC(F)  &kp LC(G)  &trans      &trans  &kp HOME  &kp LEFT_ARROW  &kp DOWN_ARROW    &kp RIGHT      &kp END
-&mt LEFT_SHIFT LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(B)  &trans      &trans  &trans    &kp LG(LEFT)    &kp LG(UP_ARROW)  &kp LG(RIGHT)  &trans
-&trans                &trans     &trans     &trans     &trans     &trans      &trans  &trans                                                     &trans
+&kp ESCAPE            &kp LC(W)  &kp LC(E)  &kp LC(R)  &kp LC(T)                         &trans            &kp PAGE_UP     &kp UP_ARROW      &kp PAGE_DOWN  &trans
+&kp LC(A)             &kp LC(S)  &kp LC(D)  &kp LC(F)  &kp LC(G)  &trans      &trans     &kp HOME          &kp LEFT_ARROW  &kp DOWN_ARROW    &kp RIGHT      &kp END
+&mt LEFT_SHIFT LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(B)  &trans      &trans     &trans            &kp LG(LEFT)    &kp LG(UP_ARROW)  &kp LG(RIGHT)  &trans
+&trans                &trans     &trans     &trans     &trans     &trans      &kp LANG1  &kp LC(KP_ENTER)                                                   &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp LC(K_VOLUME_DOWN) LC(C_VOLUME_UP)>;
+            sensor-bindings = <&inc_dec_kp LC(C_VOLUME_DOWN) LC(C_VOLUME_UP)>;
         };
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans    &trans     &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB1  &lt 5 ESC  &mkp MB2  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans    &trans     &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                 &trans
+&trans  &trans  &trans  &trans    &trans                        &trans  &trans    &trans  &trans    &trans
+&trans  &trans  &trans  &trans    &trans  &trans        &trans  &trans  &mkp MB1  &mo 5   &mkp MB2  &trans
+&trans  &trans  &trans  &trans    &trans  &trans        &trans  &trans  &trans    &trans  &trans    &trans
+&trans  &trans  &trans  &mkp MB1  &mo 5   &mkp MB2      &trans  &trans                              &trans
             >;
         };
 
