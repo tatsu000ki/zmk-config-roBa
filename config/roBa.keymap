@@ -60,7 +60,7 @@
         };
 
         kara {
-            bindings = <&kp LS(EQUAL)>;
+            bindings = <&kp LS(N6)>;
             key-positions = <7 7 8>;
         };
 
@@ -138,7 +138,7 @@
         kakko: kakko {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(N9) &kp RPAR &kp LEFT_ARROW>;
+            bindings = <&kp LS(N8) &kp LS(N9) &kp LEFT_ARROW>;
             label = "KAKKO";
         };
     };
@@ -181,10 +181,10 @@
 
         NUM {
             bindings = <
-&kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp EQUAL   &kp MINUS  &kp PLUS                             &kp BACKSLASH  &kp LS(NUMBER_8)      &kp LS(N9)         &trans     &kp PERCENT
-&kp LBKT          &kp SLASH          &kp DOLLAR  &kp SLASH  &kp ASTERISK  &trans         &trans  &kp QUESTION   &kp LEFT_BRACKET      &kp RIGHT_BRACKET  &kp COLON  &kp SEMICOLON
-&trans            &trans             &kp HASH    &trans     &kp EXCL      &kp EQUAL      &trans  &kp AMPERSAND  &kp LS(LEFT_BRACKET)  &kp LS(RBKT)       &trans     &kp BACKSLASH
-&trans            &trans             &trans      &trans     &trans        &trans         &trans  &trans                                                             &kp PIPE
+&kp LS(N7)  &kp AT     &kp LS(MINUS)  &kp MINUS  &kp LS(SEMICOLON)                      &kp INTERNATIONAL_1  &kp LS(NUMBER_8)  &kp LS(N9)            &trans   &kp PERCENT
+&kp LBKT    &kp SLASH  &kp DOLLAR     &kp SLASH  &kp LS(ASTERISK)   &trans      &trans  &kp QUESTION         &kp RBKT          &kp NON_US_BACKSLASH  &kp SQT  &kp SEMICOLON
+&trans      &trans     &kp HASH       &trans     &kp EXCL           &none       &trans  &kp LS(N6)           &kp LS(RBKT)      &kp LS(BACKSLASH)     &trans   &kp INTERNATIONAL_1
+&trans      &trans     &trans         &trans     &trans             &trans      &trans  &trans                                                                &kp LS(INTERNATIONAL_1)
             >;
         };
 
