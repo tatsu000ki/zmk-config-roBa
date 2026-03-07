@@ -59,11 +59,6 @@
             key-positions = <18 19>;
         };
 
-        kara {
-            bindings = <&kp LS(EQUAL)>;
-            key-positions = <7 7 8>;
-        };
-
         ques {
             bindings = <&kp QUESTION>;
             key-positions = <19 20>;
@@ -117,6 +112,11 @@
         sftz {
             bindings = <&kp LS(Z)>;
             key-positions = <22 23>;
+        };
+
+        kara {
+            bindings = <&kp LS(KP_EQUAL)>;
+            key-positions = <8 7>;
         };
     };
 
@@ -201,10 +201,10 @@
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans  &trans    &trans                        &trans  &trans    &trans  &trans    &trans
-&trans  &trans  &trans  &trans    &trans  &trans        &trans  &trans  &mkp MB1  &mo 5   &mkp MB2  &trans
-&trans  &trans  &trans  &trans    &trans  &trans        &trans  &trans  &trans    &trans  &trans    &trans
-&trans  &trans  &trans  &mkp MB1  &mo 5   &mkp MB2      &trans  &trans                              &trans
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans    &trans  &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB1  &mo 5   &mkp MB2  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans    &trans  &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                              &trans
             >;
         };
 
