@@ -12,10 +12,6 @@
     automouse-layer = <4>;
     scroll-layers = <5>;
 
-    /* ここから下の2行を追加！ */
-
-    delay-ms = <100>;        // ボールに触れてからマウスモードになるまでの「タメ」
-    exit-delay-ms = <150>;   // ボールから手を離してタイピングに戻るまでの「爆速化」
     // arrows {
     //     layers = <3>;
     //     bindings =
