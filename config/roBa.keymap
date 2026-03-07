@@ -115,7 +115,7 @@
         };
 
         kara {
-            bindings = <&kp LS(KP_EQUAL)>;
+            bindings = <&kp RS(EQUAL)>;
             key-positions = <8 7>;
         };
     };
