@@ -60,7 +60,7 @@
         };
 
         kara {
-            bindings = <&kp LS(N6)>;
+            bindings = <&kp LS(EQUAL)>;
             key-positions = <7 7 8>;
         };
 
@@ -181,10 +181,10 @@
 
         NUM {
             bindings = <
-&kp LS(N7)  &kp AT     &kp LS(MINUS)  &kp MINUS  &kp LS(SEMICOLON)                      &kp INTERNATIONAL_1  &kp LS(NUMBER_8)  &kp LS(N9)            &trans   &kp PERCENT
-&kp LBKT    &kp SLASH  &kp DOLLAR     &kp SLASH  &kp LS(ASTERISK)   &trans      &trans  &kp QUESTION         &kp RBKT          &kp NON_US_BACKSLASH  &kp SQT  &kp SEMICOLON
-&trans      &trans     &kp HASH       &trans     &kp EXCL           &none       &trans  &kp LS(N6)           &kp LS(RBKT)      &kp LS(BACKSLASH)     &trans   &kp INTERNATIONAL_1
-&trans      &trans     &trans         &trans     &trans             &trans      &trans  &trans                                                                &kp LS(INTERNATIONAL_1)
+&kp LS(N7)  &kp AT     &kp LS(MINUS)  &kp MINUS  &kp LS(SEMICOLON)                      &kp INTERNATIONAL_1  &kp LS(NUMBER_8)  &kp LS(N9)         &kp EQUAL  &kp PERCENT
+&kp LBKT    &kp SLASH  &kp DOLLAR     &kp SLASH  &kp LS(SQT)        &trans      &trans  &kp QUESTION         &kp RBKT          &kp BACKSLASH      &kp SQT    &kp SEMICOLON
+&trans      &trans     &kp HASH       &trans     &kp EXCL           &none       &trans  &kp LS(N6)           &kp LS(RBKT)      &kp LS(BACKSLASH)  &trans     &kp INTERNATIONAL_1
+&trans      &trans     &trans         &trans     &trans             &trans      &trans  &trans                                                               &kp LS(INTERNATIONAL_1)
             >;
         };
 
