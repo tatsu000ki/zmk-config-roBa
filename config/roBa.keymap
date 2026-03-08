@@ -208,13 +208,13 @@
 
         FUNCTION {
             bindings = <
-&kp ESC  &kp F7  &kp F8  &kp F9  &kp F12                                        &kp SLASH  &kp N7        &kp N8        &kp N9        &kp ASTRK
-&trans   &kp F4  &kp F5  &kp F6  &kp F11  &kp C_BRIGHTNESS_MINIMUM      &trans  &kp MINUS  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp PLUS
-&trans   &kp F1  &kp F2  &kp F3  &kp F10  &trans                        &trans  &kp N0     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL
-&trans   &trans  &trans  &trans  &trans   &trans                        &trans  &trans                                               &trans
+&kp ESC  &kp F7  &kp F8  &kp F9  &kp F12                                       &kp SLASH  &kp N7        &kp N8        &kp N9        &kp ASTRK
+&trans   &kp F4  &kp F5  &kp F6  &kp F11  &mt C_BRI_MIN C_BRI_MAX      &trans  &kp MINUS  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp PLUS
+&trans   &kp F1  &kp F2  &kp F3  &kp F10  &trans                       &trans  &kp N0     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL
+&trans   &trans  &trans  &trans  &trans   &trans                       &trans  &trans                                               &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_BRI_DN C_BRI_UP>;
+            sensor-bindings = <&inc_dec_kp C_BRIGHTNESS_DEC C_BRIGHTNESS_INC>;
         };
 
         NUM {
@@ -229,7 +229,7 @@
         ARROW {
             bindings = <
 &kp ESCAPE            &kp LC(W)  &kp LC(E)  &kp LC(R)  &kp LC(T)                             &kp LC(Y)         &kp PAGE_UP     &kp UP_ARROW      &kp PAGE_DOWN  &trans
-&kp LC(A)             &kp LC(S)  &kp LC(D)  &kp LC(F)  &kp LC(G)  &kp K_MUTE      &kp HOME   &kp LC(LS(TAB))   &kp LEFT_ARROW  &kp DOWN_ARROW    &kp RIGHT      &kp LC(TAB)
+&kp LC(A)             &kp LC(S)  &kp LC(D)  &kp LC(F)  &kp LC(G)  &kp C_MUTE      &kp HOME   &kp LC(LS(TAB))   &kp LEFT_ARROW  &kp DOWN_ARROW    &kp RIGHT      &kp LC(TAB)
 &mt LEFT_SHIFT LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(B)  &trans          &kp END    &trans            &kp LG(LEFT)    &kp LG(UP_ARROW)  &kp LG(RIGHT)  &trans
 &trans                &trans     &trans     &trans     &trans     &trans          &kp LANG1  &kp LC(KP_ENTER)                                                   &trans
             >;
