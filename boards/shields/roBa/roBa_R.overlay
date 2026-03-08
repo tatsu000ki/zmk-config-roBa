@@ -67,11 +67,6 @@
     input-processors = <&zip_temp_layer 4 10000>;
 };
 
-/* クリックで少し延長 */
-&mkp_input_listener {
-    input-processors = <&zip_temp_layer 4 250>;
-};
-
 /* 誤爆対策＋非マウスキーで即解除 */
 &zip_temp_layer {
     require-prior-idle-ms = <200>;
