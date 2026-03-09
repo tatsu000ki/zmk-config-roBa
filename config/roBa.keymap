@@ -212,7 +212,7 @@
         clear_on_tap_panic_on_hold: clear_on_tap_panic_on_hold {
             compatible = "zmk,behavior-hold-tap";
             label = "CLR_TAP_PANIC_HOLD";
-            #binding-cells = <0>;
+            #binding-cells = <2>;
 
             /* 先がホールド、後がタップ */
 
