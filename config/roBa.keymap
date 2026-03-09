@@ -173,6 +173,7 @@
         };
 
         //arrowlayerでのalt+tab実現
+
         alt_tab_hold: alt_tab_hold {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -191,16 +192,12 @@
         };
 
         bright_max: bright_max {
-          compatible = "zmk,behavior-macro";
-          #binding-cells = <0>;
-          wait-ms = <0>;
-          tap-ms = <0>;
-          bindings =
-            <&kp C_BRIGHTNESS_INC &kp C_BRIGHTNESS_INC &kp C_BRIGHTNESS_INC &kp C_BRIGHTNESS_INC>,
-            <&kp C_BRIGHTNESS_INC &kp C_BRIGHTNESS_INC &kp C_BRIGHTNESS_INC &kp C_BRIGHTNESS_INC>,
-            <&kp C_BRIGHTNESS_INC &kp C_BRIGHTNESS_INC &kp C_BRIGHTNESS_INC &kp C_BRIGHTNESS_INC>,
-            <&kp C_BRIGHTNESS_INC &kp C_BRIGHTNESS_INC &kp C_BRIGHTNESS_INC &kp C_BRIGHTNESS_INC>;
-          label = "BRIGHT_MAX";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <0>;
+            bindings = <&kp C_BRIGHTNESS_INC &kp C_BRIGHTNESS_INC &kp C_BRIGHTNESS_INC &kp C_BRIGHTNESS_INC &kp C_BRIGHTNESS_INC &kp C_BRIGHTNESS_INC &kp C_BRIGHTNESS_INC &kp C_BRIGHTNESS_INC &kp C_BRIGHTNESS_INC &kp C_BRIGHTNESS_INC &kp C_BRIGHTNESS_INC &kp C_BRIGHTNESS_INC &kp C_BRIGHTNESS_INC &kp C_BRIGHTNESS_INC &kp C_BRIGHTNESS_INC &kp C_BRIGHTNESS_INC>;
+            label = "BRIGHT_MAX";
         };
     };
 
@@ -261,8 +258,8 @@
         default_layer {
             bindings = <
 &kp Q                             &kp W         &kp E         &kp R                        &kp T                                             &kp Y          &kp U  &lt 5 I    &kp O    &kp P
-&mt_exit_AML_on_tap LCTRL A       &kp S         &kp D         &kp F                        &kp G        &kp LS(LG(S))               &pass    &kp H          &kp J  &kp K      &kp L    &kp ENTER
-&mt_exit_AML_on_tap LEFT_SHIFT Z  &kp X         &kp C         &kp V                        &kp B        &lt 6 N                     &kp DEL  &kp N          &kp M  &kp COMMA  &kp DOT  &kp SLASH
+&mt_exit_AML_on_tap LCTRL A       &kp S         &kp D         &kp F                        &kp G        &kp LS(LG(S))               &pass    &kp H          &kp J  &lt 5 K    &kp L    &kp ENTER
+&mt_exit_AML_on_tap LEFT_SHIFT Z  &kp X         &kp C         &kp V                        &kp B        &mo 6                       &kp DEL  &kp N          &kp M  &kp COMMA  &kp DOT  &kp SLASH
 &kp LCTRL                         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 3 LANGUAGE_2  &lt 1 SPACE  &lt_to_layer_0 2 LANG1      &kp TAB  &kp BACKSPACE                             &clear_on_tap_panic_on_hold 0 0
             >;
 
@@ -271,10 +268,10 @@
 
         FUNCTION {
             bindings = <
-&kp ESC  &kp F7  &kp F8  &kp F9  &kp F12                                                             &kp SLASH  &kp N7        &kp N8        &kp N9        &kp ASTRK
-&trans   &kp F4  &kp F5  &kp F6  &kp F11  &mt C_BRIGHTNESS_MINIMUM C_BRIGHTNESS_MAXIMUM      &trans  &kp MINUS  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp PLUS
-&trans   &kp F1  &kp F2  &kp F3  &kp F10  &trans                                             &trans  &kp N0     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL
-&trans   &trans  &trans  &trans  &trans   &trans                                             &trans  &trans                                               &trans
+&kp ESC  &kp F7  &kp F8  &kp F9  &kp F12                           &kp SLASH  &kp N7        &kp N8        &kp N9        &kp ASTRK
+&trans   &kp F4  &kp F5  &kp F6  &kp F11  &bright_max      &trans  &kp MINUS  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp PLUS
+&trans   &kp F1  &kp F2  &kp F3  &kp F10  &trans           &trans  &kp N0     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL
+&trans   &trans  &trans  &trans  &trans   &trans           &trans  &trans                                               &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_BRIGHTNESS_DEC C_BRIGHTNESS_INC>;
