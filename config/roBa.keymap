@@ -153,26 +153,24 @@
             bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &exit_AML>;
             label = "KP_EXIT_AML";
         };
-    
-      clear_mods: clear_mods {
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        wait-ms = <0>;
-        tap-ms = <0>;
-        bindings =
-          <&kp LCTRL &kp LSHIFT &kp LALT &kp LGUI>;
-        label = "CLEAR_MODS";
-      };
 
-      panic_base: panic_base {
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        wait-ms = <0>;
-        tap-ms = <0>;
-        bindings = <&to 0>;
-        label = "PANIC_BASE";
-      };
+        clear_mods: clear_mods {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <0>;
+            bindings = <&kp LCTRL &kp LSHIFT &kp LALT &kp LGUI>;
+            label = "CLEAR_MODS";
+        };
 
+        panic_base: panic_base {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <0>;
+            bindings = <&to 0>;
+            label = "PANIC_BASE";
+        };
     };
 
     behaviors {
@@ -211,18 +209,19 @@
             quick-tap-ms = <200>;
         };
 
-      clear_on_tap_panic_on_hold: clear_on_tap_panic_on_hold {
-        compatible = "zmk,behavior-hold-tap";
-        label = "CLR_TAP_PANIC_HOLD";
-        #binding-cells = <0>;
-    
-        /* 先がホールド、後がタップ */
-        bindings = <&panic_base>, <&clear_mods>;
-    
-        tapping-term-ms = <200>;
-        flavor = "balanced";
-        quick-tap-ms = <0>;
-      };
+        clear_on_tap_panic_on_hold: clear_on_tap_panic_on_hold {
+            compatible = "zmk,behavior-hold-tap";
+            label = "CLR_TAP_PANIC_HOLD";
+            #binding-cells = <0>;
+
+            /* 先がホールド、後がタップ */
+
+            bindings = <&panic_base>, <&clear_mods>;
+
+            tapping-term-ms = <200>;
+            flavor = "balanced";
+            quick-tap-ms = <0>;
+        };
     };
 
     keymap {
@@ -233,7 +232,7 @@
 &kp Q                             &kp W         &kp E         &kp R                        &kp T                                                   &kp Y        &kp U  &lt 5 I    &kp O    &kp P
 &mt_exit_AML_on_tap LCTRL A       &kp S         &kp D         &kp F                        &kp G        &kp LS(LG(S))               &pass          &kp H        &kp J  &kp K      &kp L    &kp ENTER
 &mt_exit_AML_on_tap LEFT_SHIFT Z  &kp X         &kp C         &kp V                        &kp B        &lt 6 N                     &kp DEL        &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&kp LCTRL                         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 3 LANGUAGE_2  &lt 1 SPACE  &lt_to_layer_0 2 LANG1      &kp BACKSPACE  &lt 1 ENTER                             &kp ESC
+&kp LCTRL                         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 3 LANGUAGE_2  &lt 1 SPACE  &lt_to_layer_0 2 LANG1      &kp BACKSPACE  &lt 1 ENTER                             &clear_on_tap_panic_on_hold 0 0
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
