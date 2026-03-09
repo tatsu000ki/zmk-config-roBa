@@ -153,6 +153,26 @@
             bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &exit_AML>;
             label = "KP_EXIT_AML";
         };
+    
+      clear_mods: clear_mods {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        wait-ms = <0>;
+        tap-ms = <0>;
+        bindings =
+          <&kp LCTRL &kp LSHIFT &kp LALT &kp LGUI>;
+        label = "CLEAR_MODS";
+      };
+
+      panic_base: panic_base {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        wait-ms = <0>;
+        tap-ms = <0>;
+        bindings = <&to 0>;
+        label = "PANIC_BASE";
+      };
+
     };
 
     behaviors {
