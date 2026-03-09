@@ -228,7 +228,7 @@
 
         ARROW {
             bindings = <
-&kp ESCAPE            &kp LC(W)  &kp LC(E)  &kp LC(R)  &kp LC(T)                             &kp LC(Y)         &kp PAGE_UP     &kp UP_ARROW      &kp PAGE_DOWN  &trans
+&kp LA(TAB)           &kp LC(W)  &kp LC(E)  &kp LC(R)  &kp LC(T)                             &kp LC(Y)         &kp PAGE_UP     &kp UP_ARROW      &kp PAGE_DOWN  &trans
 &kp LC(A)             &kp LC(S)  &kp LC(D)  &kp LC(F)  &kp LC(G)  &kp C_MUTE      &kp HOME   &kp LC(LS(TAB))   &kp LEFT_ARROW  &kp DOWN_ARROW    &kp RIGHT      &kp LC(TAB)
 &mt LEFT_SHIFT LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(B)  &trans          &kp END    &trans            &kp LG(LEFT)    &kp LG(UP_ARROW)  &kp LG(RIGHT)  &trans
 &trans                &trans     &trans     &trans     &trans     &trans          &kp LANG1  &kp LC(KP_ENTER)                                                   &trans
