@@ -1,0 +1,37 @@
+name: Debug ZMK macro headers
+
+on:
+  workflow_dispatch:
+
+jobs:
+  debug:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout your config repo
+        uses: actions/checkout@v4
+
+      - name: Show repo files
+        run: |
+          pwd
+          ls -la
+          find . -maxdepth 3 -type f | sed -n '1,200p'
+
+      - name: Checkout ZMK repo (same ref as build workflow)
+        uses: actions/checkout@v4
+        with:
+          repository: zmkfirmware/zmk
+          ref: v0.2
+          path: zmk
+
+      - name: Inspect macro headers in ZMK tree
+        run: |
+          echo "ZMK tree:"
+          ls -la zmk
+          echo "--- find macro headers ---"
+          find zmk -name "macro.h" -o -name "*macro*.h" || true
+          echo "--- list dt-bindings/zmk ---"
+          find zmk -path "*dt-bindings/zmk*" -maxdepth 4 -type f | sed -n '1,200p' || true
+          echo "--- grep macro_press ---"
+          grep -R "macro_press" -n zmk | head || true
+          echo "--- grep macro_pause_for_release ---"
+          grep -R "macro_pause_for_release" -n zmk | head || true
