@@ -28,8 +28,8 @@
             key-positions = <10 11 12>;
         };
 
-        muhennkann {
-            bindings = <&to_layer_0 INT_MUHENKAN>;
+        tab2 {
+            bindings = <&kp TAB>;
             key-positions = <11 10>;
         };
 
