@@ -210,6 +210,19 @@
             flavor = "balanced";
             quick-tap-ms = <200>;
         };
+
+      clear_on_tap_panic_on_hold: clear_on_tap_panic_on_hold {
+        compatible = "zmk,behavior-hold-tap";
+        label = "CLR_TAP_PANIC_HOLD";
+        #binding-cells = <0>;
+    
+        /* 先がホールド、後がタップ */
+        bindings = <&panic_base>, <&clear_mods>;
+    
+        tapping-term-ms = <200>;
+        flavor = "balanced";
+        quick-tap-ms = <0>;
+      };
     };
 
     keymap {
