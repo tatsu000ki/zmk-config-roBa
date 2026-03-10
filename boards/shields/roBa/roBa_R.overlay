@@ -89,7 +89,7 @@
 /* 誤爆対策＋非マウスキーで即解除 */
 /*
 &zip_temp_layer {
-    require-prior-idle-ms = <600>;
+    require-prior-idle-ms = <200>;
     excluded-positions = <18 19 20 10 22 34>;
 };
 */
