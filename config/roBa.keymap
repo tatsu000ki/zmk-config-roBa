@@ -269,13 +269,12 @@
             compatible = "zmk,behavior-hold-tap";
             label = "MT_EXIT_AML_Z";
             bindings = <&kp>, <&kp_exit_AML>;
+
             #binding-cells = <2>;
-        
             flavor = "tap-preferred";
             tapping-term-ms = <170>;
             quick-tap-ms = <0>;
         };
-
     };
 
     keymap {
@@ -283,10 +282,10 @@
 
         default_layer {
             bindings = <
-&kp Q                            &kp W         &kp E         &kp R                   &kp T                                             &kp Y          &kp U  &lt 5 I    &kp O    &kp P
-&mt_exit_aml_tp170 LCTRL A       &kp S         &kp D         &kp F                   &kp G        &kp LS(LG(S))               &pass    &kp H          &kp J  &lt 5 K    &kp L    &kp ENTER
-&mt_exit_aml_tp170 LEFT_SHIFT Z  &kp X         &kp C         &kp V                   &kp B        &mo 6                       &kp DEL  &kp N          &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&kp LCTRL                        &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 3 LANG1  &lt 1 SPACE  &lt_to_layer_0 2 LANG2      &kp TAB  &kp BACKSPACE                             &clear_on_tap_panic_on_hold 0 0
+&kp Q                        &kp W         &kp E         &kp R                   &kp T                                             &kp Y          &kp U  &lt 5 I    &kp O    &kp P
+&mt_exit_aml_tp170 LCTRL A   &kp S         &kp D         &kp F                   &kp G        &kp LS(LG(S))               &pass    &kp H          &kp J  &lt 5 K    &kp L    &kp ENTER
+&mt_exit_aml_Z LEFT_SHIFT Z  &kp X         &kp C         &kp V                   &kp B        &mo 6                       &kp DEL  &kp N          &kp M  &kp COMMA  &kp DOT  &kp SLASH
+&kp LCTRL                    &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 3 LANG1  &lt 1 SPACE  &lt_to_layer_0 2 LANG2      &kp TAB  &kp BACKSPACE                             &clear_on_tap_panic_on_hold 0 0
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
