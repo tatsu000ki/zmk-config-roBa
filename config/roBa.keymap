@@ -250,6 +250,17 @@
             flavor = "balanced";
             quick-tap-ms = <0>;
         };
+
+        mt_exit_AML_on_tap_a: mt_exit_AML_on_tap_a {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MT_EXIT_AML_ON_TAP_A";
+            bindings = <&kp>, <&kp_exit_AML>;
+        
+            #binding-cells = <2>;
+            flavor = "tap-preferred";   /* ← Aを優先 */
+            tapping-term-ms = <170>;    /* ← Aが落ちるなら少し上げる */
+            quick-tap-ms = <0>;
+        };
     };
 
     keymap {
