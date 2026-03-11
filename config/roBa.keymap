@@ -1,4 +1,4 @@
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 80
+ｊｊｊｊｊ#define ZMK_POINTING_DEFAULT_SCRL_VAL 80
 #define AML 4
 
 #include <input/processors.dtsi>
@@ -251,14 +251,16 @@
             quick-tap-ms = <0>;
         };
 
-        mt_exit_AML_on_tap_a: mt_exit_AML_on_tap_a {
+        mt_exit_aml_tp170: mt_exit_aml_tp170 {
             compatible = "zmk,behavior-hold-tap";
-            label = "MT_EXIT_AML_ON_TAP_A";
-            bindings = <&kp>, <&kp_exit_AML>;
+            label = "MT_EXIT_AML_TP170";
         
+            /* hold時は普通の &kp、tap時は &kp_exit_AML（＝タップしたらAML解除） */
+            bindings = <&kp>, <&kp_exit_AML>;
             #binding-cells = <2>;
-            flavor = "tap-preferred";   /* ← Aを優先 */
-            tapping-term-ms = <170>;    /* ← Aが落ちるなら少し上げる */
+        
+            flavor = "tap-preferred";
+            tapping-term-ms = <170>;
             quick-tap-ms = <0>;
         };
     };
