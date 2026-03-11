@@ -1,4 +1,4 @@
-ｊｊｊｊｊ#define ZMK_POINTING_DEFAULT_SCRL_VAL 80
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 80
 #define AML 4
 
 #include <input/processors.dtsi>
