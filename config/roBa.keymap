@@ -264,6 +264,18 @@
             tapping-term-ms = <260>;
             quick-tap-ms = <0>;
         };
+
+        mt_exit_aml_Z: mt_exit_aml_Z {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MT_EXIT_AML_Z";
+            bindings = <&kp>, <&kp_exit_AML>;
+            #binding-cells = <2>;
+        
+            flavor = "tap-preferred";
+            tapping-term-ms = <170>;
+            quick-tap-ms = <0>;
+        };
+
     };
 
     keymap {
