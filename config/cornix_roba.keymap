@@ -13,7 +13,9 @@
     quick-tap-ms = <0>;
 };
 
+/* クリックで少し延長 
 &trackball { scroll-layers = <5>; };
+*/
 
 / {
     combos {
