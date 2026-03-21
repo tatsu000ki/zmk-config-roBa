@@ -1,2 +1,2 @@
 /* cornix_roba_L.overlay */
-#include "roBa.dtsi"
+#include "cornix_roba.dtsi"
