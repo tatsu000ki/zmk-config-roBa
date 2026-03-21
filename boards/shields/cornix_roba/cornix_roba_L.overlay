@@ -1,9 +1,14 @@
-/ {
-    kscan0: kscan {
-        compatible = "zmk,kscan-gpio-matrix";
-        diode-direction = "col2row";
+#include "cornix-layouts.dtsi"
 
-        row-gpios = <&gpio0 2 GPIO_ACTIVE_LOW>;
-        col-gpios = <&gpio0 3 GPIO_ACTIVE_LOW>;
+/ {
+    chosen {
+        zmk,kscan = &mock_kscan;
+    };
+
+    mock_kscan: kscan_1 {
+        compatible = "zmk,kscan-mock";
+        columns = <14>;
+        rows = <4>;
+        events = <0>;
     };
 };
