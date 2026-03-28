@@ -293,10 +293,10 @@
 
         FUNCTION {
             bindings = <
-&kp ESC  &kp F7  &kp F10  &kp F9  &kp F12                                   &kp MINUS  &kp N7  &kp N8  &kp N9  &kp SLASH
-&trans   &kp F4  &kp F5   &kp F6  &kp F11  &bright_max      &trans          &kp PLUS   &kp N4  &kp N5  &kp N6  &kp LS(APOS)
-&trans   &kp F1  &kp F2   &kp F3  &kp F8   &trans           &trans          &kp N0     &kp N1  &kp N2  &kp N3  &kp LS(MINUS)
-&trans   &trans  &trans   &trans  &trans   &trans           &kp LS(PERIOD)  &trans                             &trans
+&kp ESC  &kp F7  &kp F10  &kp F9  &kp F12                                 &kp MINUS  &kp N7  &kp N8  &kp N9  &kp SLASH
+&trans   &kp F4  &kp F5   &kp F6  &kp F11  &bright_max        &trans      &kp PLUS   &kp N4  &kp N5  &kp N6  &kp LS(APOS)
+&trans   &kp F1  &kp F2   &kp F3  &kp F8   &kp LS(LG(S))      &trans      &kp N0     &kp N1  &kp N2  &kp N3  &kp LS(MINUS)
+&trans   &trans  &trans   &trans  &trans   &trans             &kp PERIOD  &kp N0                             &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_BRIGHTNESS_DEC C_BRIGHTNESS_INC>;
@@ -304,19 +304,21 @@
 
         NUM {
             bindings = <
-&kp LS(N7)  &kp AT     &kp LS(MINUS)  &kp MINUS  &kp LS(SEMICOLON)                      &kp INTERNATIONAL_1  &kp LS(NUMBER_8)  &kp LS(N9)         &kp EQUAL  &kp PERCENT
-&kp LBKT    &kp SLASH  &kp DOLLAR     &kp SLASH  &kp LS(SQT)        &trans      &trans  &kp QUESTION         &kp RBKT          &kp BACKSLASH      &kp SQT    &kp SEMICOLON
-&trans      &trans     &kp HASH       &trans     &kp EXCL           &none       &trans  &kp LS(N6)           &kp LS(RBKT)      &kp LS(BACKSLASH)  &trans     &kp INTERNATIONAL_1
-&trans      &trans     &trans         &trans     &trans             &trans      &trans  &trans                                                               &kp LS(INTERNATIONAL_1)
+&kp LS(N7)  &kp AT     &kp LS(MINUS)  &kp MINUS  &kp LS(SEMICOLON)                          &kp INTERNATIONAL_1  &kp LS(NUMBER_8)  &kp LS(N9)         &kp EQUAL  &kp PERCENT
+&kp LBKT    &kp SLASH  &kp DOLLAR     &kp SLASH  &kp LS(SQT)        &trans          &trans  &kp QUESTION         &kp RBKT          &kp BACKSLASH      &kp SQT    &kp SEMICOLON
+&trans      &trans     &kp HASH       &trans     &kp EXCL           &kp C_MUTE      &trans  &kp LS(N6)           &kp LS(RBKT)      &kp LS(BACKSLASH)  &trans     &kp INTERNATIONAL_1
+&trans      &trans     &trans         &trans     &trans             &trans          &trans  &trans                                                               &kp LS(INTERNATIONAL_1)
             >;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOLUME_UP>;
         };
 
         ARROW {
             bindings = <
-&alt_tab_hold               &kp N7        &kp N8        &kp N9        &kp LS(SEMICOLON)                            &kp LC(Y)        &kp PAGE_UP     &kp UP_ARROW      &kp PAGE_DOWN  &trans
-&mt LEFT_CONTROL BACKSPACE  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp LS(SQT)        &kp C_MUTE      &kp HOME  &kp LC(TAB)      &kp LEFT_ARROW  &kp DOWN_ARROW    &kp RIGHT      &kp LC(ENTER)
-&mt LEFT_SHIFT BACKSPACE    &kp NUMBER_1  &kp NUMBER_2  &kp N3        &kp SLASH          &trans          &kp END   &kp LS(LC(TAB))  &kp LG(LEFT)    &kp LG(UP_ARROW)  &kp LG(RIGHT)  &kp LG(DOWN_ARROW)
-&trans                      &kp N0        &kp DOT       &trans        &trans             &kp ENTER       &trans    &trans                                                            &trans
+&kp BACKSPACE            &kp N7        &kp N8        &kp N9        &kp LS(SEMICOLON)                            &kp LC(Y)        &kp PAGE_UP     &kp UP_ARROW      &kp PAGE_DOWN  &trans
+&mt LEFT_CONTROL DELETE  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp LS(SQT)        &kp C_MUTE      &kp HOME  &kp LC(TAB)      &kp LEFT_ARROW  &kp DOWN_ARROW    &kp RIGHT      &kp LS(ENTER)
+&mt LEFT_SHIFT PERIOD    &kp NUMBER_1  &kp NUMBER_2  &kp N3        &kp SLASH          &kp C_MUTE      &kp END   &kp LS(LC(TAB))  &kp LG(LEFT)    &kp LG(UP_ARROW)  &kp LG(RIGHT)  &kp LG(DOWN_ARROW)
+&kp N0                   &kp N0        &kp DOT       &trans        &trans             &kp ENTER       &trans    &trans                                                            &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LC(C_VOLUME_DOWN) LC(C_VOLUME_UP)>;
