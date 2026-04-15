@@ -31,7 +31,10 @@
         threshold = <20>;
         reset-timeout-ms = <200>;
         require-prior-idle-ms = <200>;
+        excluded-positions = <18 19 20 34 37>;
+/*
         excluded-positions = <8 9 18 19 20 10 22 34>;
+*/
     };
 };
 
