@@ -275,6 +275,18 @@
             tapping-term-ms = <170>;
             quick-tap-ms = <0>;
         };
+
+        // 新しく作る「Shift専用」の道具
+        mt_shift_exit: mt_shift_exit {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MT_SHIFT_EXIT";
+            #binding-cells = <1>;       // 引数はホールド用の1つだけ
+            bindings = <&kp>, <&exit_AML>; // タップ時は引数を取らない exit_AML を実行
+            
+            flavor = "tap-preferred";
+            tapping-term-ms = <170>;    // お好みの速度に調整
+            quick-tap-ms = <0>;
+        };
     };
 
     keymap {
