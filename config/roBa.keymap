@@ -277,12 +277,13 @@
         };
 
         // 新しく作る「Shift専用」の道具
+
         mt_shift_exit: mt_shift_exit {
             compatible = "zmk,behavior-hold-tap";
             label = "MT_SHIFT_EXIT";
             #binding-cells = <1>;       // 引数はホールド用の1つだけ
-            bindings = <&kp>, <&exit_AML>; // タップ時は引数を取らない exit_AML を実行
-            
+            bindings = <&kp>, <&exit_AML>;
+ // タップ時は引数を取らない exit_AML を実行
             flavor = "tap-preferred";
             tapping-term-ms = <170>;    // お好みの速度に調整
             quick-tap-ms = <0>;
@@ -294,10 +295,10 @@
 
         default_layer {
             bindings = <
-&mt Q TAB                                 &kp W         &kp E         &kp R                           &kp T                                      &kp Y          &kp U  &kp I      &kp O    &kp P
-&kp A                                     &kp S         &kp D         &kp F                           &kp G        &kp LS(LG(S))      &pass      &kp H          &kp J  &lt 5 K    &kp L    &kp ENTER
-&kp Z                                     &kp X         &kp C         &kp V                           &kp B        &mo 6              &kp DEL    &kp N          &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&mt_exit_aml_tp170 LEFT_SHIFT LEFT_SHIFT  &kp LEFT_WIN  &kp LEFT_ALT  &mt_exit_aml_tp170 LCTRL LANG1  &lt 1 SPACE  &lt 2 LANG2        &lt 3 DEL  &kp BACKSPACE                             &clear_on_tap_panic_on_hold 0 0
+&mt Q TAB                    &kp W         &kp E         &kp R                           &kp T                                      &kp Y          &kp U  &kp I      &kp O    &kp P
+&kp A                        &kp S         &kp D         &kp F                           &kp G        &kp LS(LG(S))      &pass      &kp H          &kp J  &lt 5 K    &kp L    &kp ENTER
+&kp Z                        &kp X         &kp C         &kp V                           &kp B        &mo 6              &kp DEL    &kp N          &kp M  &kp COMMA  &kp DOT  &kp SLASH
+&mt_shift_exit LEFT_SHIFT 0  &kp LEFT_WIN  &kp LEFT_ALT  &mt_exit_aml_tp170 LCTRL LANG1  &lt 1 SPACE  &lt 2 LANG2        &lt 3 DEL  &kp BACKSPACE                             &clear_on_tap_panic_on_hold 0 0
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
