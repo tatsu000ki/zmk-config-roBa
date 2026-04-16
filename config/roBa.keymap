@@ -281,9 +281,10 @@
         mt_shift_exit: mt_shift_exit {
             compatible = "zmk,behavior-hold-tap";
             label = "MT_SHIFT_EXIT";
-            
+
             /* ホールドは引数を取る(&kp)、タップは引数を取らない(&exit_AML) */
-            bindings = <&kp>, <&exit_AML>; 
+
+            bindings = <&kp>, <&exit_AML>;
 
             #binding-cells = <2>; // ←ここを必ず「2」にする
             flavor = "tap-preferred";
@@ -341,10 +342,10 @@
 
         MOUSE {
             bindings = <
-&trans     &trans  &trans  &trans  &trans                      &trans  &trans    &trans  &trans    &trans
-&trans     &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB1  &mo 5   &mkp MB2  &trans
-&trans     &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans    &trans  &trans    &trans
-&kp LCTRL  &trans  &trans  &trans  &trans  &trans      &trans  &trans                              &trans
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans    &trans  &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB1  &mo 5   &mkp MB2  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans    &trans  &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                              &trans
             >;
         };
 
