@@ -281,11 +281,13 @@
         mt_shift_exit: mt_shift_exit {
             compatible = "zmk,behavior-hold-tap";
             label = "MT_SHIFT_EXIT";
-            #binding-cells = <1>;       // 引数はホールド用の1つだけ
-            bindings = <&kp>, <&exit_AML>;
- // タップ時は引数を取らない exit_AML を実行
+            
+            /* ホールドは引数を取る(&kp)、タップは引数を取らない(&exit_AML) */
+            bindings = <&kp>, <&exit_AML>; 
+
+            #binding-cells = <2>; // ←ここを必ず「2」にする
             flavor = "tap-preferred";
-            tapping-term-ms = <170>;    // お好みの速度に調整
+            tapping-term-ms = <170>;
             quick-tap-ms = <0>;
         };
     };
