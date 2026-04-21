@@ -254,15 +254,17 @@
         mt_exit_aml_tp170: mt_exit_aml_tp170 {
             compatible = "zmk,behavior-hold-tap";
             label = "MT_EXIT_AML_TP170";
-
-            /* hold時は普通の &kp、tap時は &kp_exit_AML（＝タップしたらAML解除） */
-
             bindings = <&kp>, <&kp_exit_AML>;
-
             #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <260>;
-            quick-tap-ms = <0>;
+            
+            // これが重要！
+            flavor = "balanced"; 
+            
+            // 判定時間を少し短くして、キビキビ動くようにします
+            tapping-term-ms = <200>; 
+            
+            // 連続でCtrlを使いたい時のための猶予（お好みで150〜200）
+            quick-tap-ms = <175>;
         };
 
         mt_exit_aml_Z: mt_exit_aml_Z {
