@@ -255,15 +255,19 @@
             compatible = "zmk,behavior-hold-tap";
             label = "MT_EXIT_AML_TP170";
             bindings = <&kp>, <&kp_exit_AML>;
+
             #binding-cells = <2>;
-            
+
             // これが重要！
-            flavor = "balanced"; 
-            
+
+            flavor = "balanced";
+
             // 判定時間を少し短くして、キビキビ動くようにします
-            tapping-term-ms = <200>; 
-            
+
+            tapping-term-ms = <200>;
+
             // 連続でCtrlを使いたい時のための猶予（お好みで150〜200）
+
             quick-tap-ms = <175>;
         };
 
@@ -333,9 +337,9 @@
 
         ARROW {
             bindings = <
-&kp BACKSPACE            &kp N7        &kp N8        &kp N9        &kp LS(SEMICOLON)                            &kp LC(Y)        &kp PAGE_UP     &kp UP_ARROW      &kp PAGE_DOWN  &trans
-&mt LEFT_CONTROL DELETE  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp LS(SQT)        &kp C_MUTE      &kp HOME  &kp LC(TAB)      &kp LEFT_ARROW  &kp DOWN_ARROW    &kp RIGHT      &kp LS(ENTER)
-&mt LEFT_SHIFT PERIOD    &kp NUMBER_1  &kp NUMBER_2  &kp N3        &kp SLASH          &kp C_MUTE      &kp END   &kp LS(LC(TAB))  &kp LG(LEFT)    &kp LG(UP_ARROW)  &kp LG(RIGHT)  &kp LG(DOWN_ARROW)
+&kp BACKSPACE            &kp N7        &kp N8        &kp N9        &kp LS(SEMICOLON)                            &kp LC(TAB)      &kp PAGE_UP     &kp UP_ARROW      &kp PAGE_DOWN  &kp LC(W)
+&mt LEFT_CONTROL DELETE  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp LS(SQT)        &kp C_MUTE      &kp HOME  &kp LC(LS(TAB))  &kp LEFT_ARROW  &kp DOWN_ARROW    &kp RIGHT      &kp LS(ENTER)
+&mt LEFT_SHIFT PERIOD    &kp NUMBER_1  &kp NUMBER_2  &kp N3        &kp SLASH          &kp C_MUTE      &kp END   &none            &kp LG(LEFT)    &kp LG(UP_ARROW)  &kp LG(RIGHT)  &kp LG(DOWN_ARROW)
 &kp N0                   &kp N0        &kp DOT       &trans        &trans             &kp ENTER       &trans    &trans                                                            &trans
             >;
 
