@@ -321,7 +321,7 @@
 &trans   &trans  &trans   &trans  &trans   &trans             &kp PERIOD  &kp N0                             &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_BRIGHTNESS_DEC C_BRIGHTNESS_INC>;
+            sensor-bindings = <&inc_dec_kp C_BRIGHTNESS_INC C_BRIGHTNESS_DEC>;
         };
 
         NUM {
