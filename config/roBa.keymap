@@ -125,7 +125,7 @@
         pass: pass {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(H) &kp N1 &kp Q &kp A &kp Z &kp N1 &kp Q &kp A &kp Z>;
+            bindings = <&kp LS(K) &kp N1 &kp Q &kp A &kp Z &kp N1 &kp Q &kp A &kp Z>;
             label = "PASS";
         };
 
